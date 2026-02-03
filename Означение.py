@@ -299,3 +299,157 @@ match day:
     
 '''
 
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+print('Привіт, Ігор!')
+print(10)
+
+print(10 + 7)
+
+if 10 > 5: print('10 > 5')
+
+a = 10
+b = 15
+print('b') if b > a else print('a')
+
+day = 5
+match day:
+    case 1: print('ПН')
+    case 2: print('вт')
+    case 3: print('ср')
+    case 4: print('чт')
+    case 5: print('пт')
+    case 6: print('сб')
+    case 7: print('нд')
+'''
+
+needed_potatoes = int(input('Скільки картоплі чистити? '))
+pealed_potatoes = 0
+
+while pealed_potatoes < needed_potatoes:
+    print('Беремо картоплю...')
+    is_rotten = input('Картопля гнила? ')
+    if is_rotten == 'так':
+        print('Викидаємо!')
+        continue
+    print('Чистимо картоплю...')
+    pealed_potatoes += 1
+    print(f'Готово! Почищено: {pealed_potatoes}')
+    is_tired = input('Ви втомились? ')
+    if is_tired == 'так':
+        break
+else:
+    print('Почистили ВСЮ картоплю!')
+
+print(f'Почистили {pealed_potatoes} картоплі!')
+
+
+'''
+while True:
+    num1 = float(input('Введіть перше число: '))
+    num2 = float(input('Введіть друге число: '))
+    action = input('Введіть операцію (+, -, *, /): ')
+
+    match action:
+        case '+': print(f'{num1} + {num2} = {num1 + num2}')
+        case '-': print(f'{num1} - {num2} = {num1 - num2}')
+        case '*': print(f'{num1} * {num2} = {num1 * num2}')
+        case '/': 
+            if num2 == 0: print('Неможна ділити на нуль!')
+            else: print(f'{num1} / {num2} = {num1 / num2}')
+        case _: print('Некоректна операція')
+    
+    q = input('Input \'q\' to quit or press Enter to continue: ')
+    if q == 'q':
+        break
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+# number = int(input('Введіть число: '))
+
+# number = int('10')
+# print(type(number))
+
+# float()
+# str()
+# bool()
+
+# print(range(5)) # 0 1 2 3 4
+# print(range(3, 8)) # 3 4 5 6 7
+# print(range(3, 10, 3)) # 3 6 9
+# r = range(10)
+# print(type(r))
+
+#count = int(input('Скільки разів повторити цикл? '))
+
+# counter = 0
+# while counter < count:
+#     print(counter)
+#     counter += 1
+
+# for i in range(count):
+#     if i == 100:
+#         break
+#     if i % 5 == 0:
+#         continue
+#     print(i, end=' ')
+# else:
+#     print('Діапазон закінчився')
+
+# num = 10
+
+# for i in range(5):
+#     print(f'i = {i}')
+#     for j in range(4):
+#         print(f'\tj = {j}')
+#         print('\t\t', end='')
+#         for k in range(2):
+#             print(f'k = {k}', end=' ')
+#         print()
+#     print()
+
+# counter_outer = 0
+# while counter_outer < 5:
+#     print(counter_outer)
+#     counter_inner = 0
+#     while counter_inner < 4:
+#         print(counter_inner, end=' ')
+#         counter_inner += 1
+#     print()
+#     counter_outer += 1
+
+import random
+
+random_number = random.randint(10, 50)
+
+print(random_number)
+
+randint = 10
+
+from random import randint
+
+randint = 12
+random_number = randint(10, 50)
+'''
