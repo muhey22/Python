@@ -453,3 +453,290 @@ from random import randint
 randint = 12
 random_number = randint(10, 50)
 '''
+
+
+
+'''
+
+fruits = ['apple', 'lemon', 'pamelo', 'mango', 'pineapple', 'watermelon']
+
+print(', '.join(fruits))
+fruits.append('kiwi')
+print(', '.join(fruits))
+fruits.extend(['orange', 'banana'])
+print(', '.join(fruits))
+fruits.insert(3, 'watermelon')
+print(', '.join(fruits))
+
+apple_count = fruits.count('apple')
+print(apple_count)
+watermelon_count = fruits.count('watermelon')
+print(watermelon_count)
+grapefruit_count = fruits.count('grapefruit')
+print(grapefruit_count)
+
+while 'watermelon' in fruits:
+    fruits.remove('watermelon')
+
+print(', '.join(fruits))
+
+if 'grapefruit' in fruits:
+    fruits.remove('grapefruit')
+
+    '''
+'''
+    fruits.sort()
+print(fruits)
+fruits.reverse()
+print(fruits)
+
+'''
+'''
+
+print(fruits.index('pineapple'))
+print(fruits.index('watermelon'))
+print(fruits.index('grapefruit'))
+'''
+
+'''
+list1 = [1,2,3]
+list2 = [5,6,7]
+result = list1 + list2
+print(result)
+
+print(list1 * 3)
+'''
+
+
+'''
+# new_list = [expression for variable in iterable if condition]
+# new_list = [вираз for змінна in послідовності if умова]
+
+numbers = [10, 1, 2, 3, -6, 12, 0, -11, 5]
+even_numbers = [number for number in numbers if number % 2 == 0]
+# for number in numbers:
+#     if number % 2 == 0:
+#         even_numbers.append(number)
+
+print(even_numbers)
+
+odd_numbers = [x for x in range(1, 20, 2)]
+print(odd_numbers)
+'''
+
+'''
+list2d = [ [1, 2, 3], [4, 5, 6] ]
+
+for list in list2d:
+    for i in list:
+        print(i, end=' ')
+    print()
+    '''
+
+'''tuple1 = tuple()
+print(type(tuple1))
+
+fruits_tuple = tuple(fruits)
+print(fruits_tuple)
+print(type(fruits_tuple))
+
+# fruits_tuple[2] = 'lkasdjflk;ajs'
+
+fruits_tuple = tuple(['apple', 'orange'])
+print(fruits_tuple
+'''
+
+
+'''
+colors = ('red', 'green', 'blue', 'purple')
+
+(red, green, blue, purple) = colors
+
+(red, green, *other_colors) = colors
+
+print(other_colors)
+
+print(red)
+print(green)
+print(blue)
+print(purple)
+'''
+
+
+
+
+'''
+first = {'apple', 'mango', 'cherry', 'kiwi'}
+second = {'mango', 'pamelo', 'kiwi', 'orange'}
+
+difference = first.difference(second)
+difference = first - second
+print(difference)
+
+first.difference_update(second)
+'''
+
+
+
+
+
+'''
+first = {'apple', 'mango', 'cherry', 'kiwi'}
+second = {'mango', 'pamelo', 'kiwi', 'orange'}
+
+intersection = first.intersection(second)
+intersection = first & second # оператор &
+
+print(intersection)
+
+# union = first.union(second)
+# union = first | second # оператор or
+# print(union)
+print(first)
+print(second)
+'''
+
+
+
+
+
+
+'''my_set = set()
+my_set = set( ['apple', 'cherry', 'mango'] )
+
+my_set = { 'apple', 'cherry', 'mango', 'mango' }
+
+print(my_set)
+print(type(my_set))
+
+# print(my_set[0])
+# my_set[1] = 'pamelo'
+
+print(len(my_set))
+
+new_set = {True, 1, 0, False}
+print(len(new_set))
+print(new_set)
+
+for item in my_set:
+    print(item)
+
+print('apple' in my_set)
+print('banana' not in my_set)'''
+
+
+
+
+
+
+
+'''
+first = {'apple', 'mango', 'cherry', 'kiwi'}
+second = {'mango', 'pamelo', 'kiwi', 'orange'}
+
+intersection = first.intersection(second)
+intersection = first & second # оператор &
+
+first.intersection_update(second)
+
+print(intersection)
+'''
+
+
+
+'''
+first = {'apple', 'mango', 'cherry', 'kiwi'}
+second = {'mango', 'pamelo', 'kiwi', 'orange'}
+
+difference = first.difference(second)
+difference = first - second
+print(difference)
+
+first.difference_update(second)
+'''
+
+
+'''
+sym_diff = first.symmetric_difference(second)
+sym_diff = first ^ second # оператор XOR
+print(sym_diff)
+
+first.symmetric_difference_update(second)
+'''
+
+
+
+'''
+first = {'apple', 'mango', 'cherry', 'kiwi'}
+second = {'mango', 'pamelo', 'kiwi', 'orange'}
+
+frozen_food = frozenset(first | second)
+
+print(frozen_food)
+print(type(frozen_food))
+
+# frozen_food.add('watermelon') Помилка!
+# '''
+
+
+'''
+contacts = {
+    'Антон': '0506959068',
+    'Ліза': '0474838458',
+    'Сергій': '0550404033'
+}
+
+print(contacts['Ліза'])
+contacts['Сергій'] = '0650499596'
+print(contacts['Сергій'])
+
+contacts['Настя'] = '0500440405'
+print(contacts['Настя'])
+
+contacts.update({'Антон': '0670450044', 'Тимофій': '0897477744'})
+
+print(contacts)
+
+'''
+
+
+
+'''
+print(contacts.keys())
+print(contacts.values())
+print(contacts.items())
+
+for i in contacts:
+    print(f"{i}: {contacts[i]}")
+'''
+
+'''
+contacts.pop('Настя')
+contacts.popitem()
+contacts.clear()
+ 
+'''
+
+
+
+'''
+employees = {
+    '1': {
+        'name' : 'Антон',
+        'position': 'Junior .NET Developer',
+        'salary': 20000
+    },
+    '2': {
+        'name' : 'Анастасія',
+        'position':'Team Lead',
+        'salary': 115000
+    },
+    '3': {
+        'name' : 'Кирило',
+        'position': 'Senior .NET Developer',
+        'salary': 90000
+    }
+}
+
+print(employees['2']['position'])
+'''
